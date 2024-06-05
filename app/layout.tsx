@@ -3,6 +3,7 @@ import { Urbanist } from 'next/font/google'
 
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
+import ModalProvider from '@/providers/modal-provider'
 
 import './globals.css'
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     return (
         <html lang='en'>
             <body className={font.className}>
+                <ModalProvider />
                 <Navbar />
                 {children}
                 <Footer />
